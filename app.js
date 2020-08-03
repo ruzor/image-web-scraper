@@ -10,13 +10,15 @@ const parser = async query => {
   await page.click('.hdtb-mitem.hdtb-imb > a[data-sc="I"]');
   await page.waitForNavigation();
   const html = await page.content();
-
-  for (const [key, value] of Object.entries($('img', html))) {
+  console.log('Loading...');
+  for (const [key, value] of Object.entries($('div.isv-r.PNCib.BUooTd a:nth-child(2)', html))) {
     if (!!value.attribs) {
-      let rValue = value.attribs.title? value.attribs.title : value.attribs['data-src'];
-      if (rValue) {
-        console.log(key, rValue);
+      if (value.attribs.href !== undefined) {
+        let rValue = value.attribs.href;
+        console.log(rValue);
       }
+    } else {
+      return;
     }
   }
 }

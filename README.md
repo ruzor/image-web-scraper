@@ -1,9 +1,9 @@
 # image-web-scraper
-Simple CLI tool to scrape images from the internetz.
+Simple CLI tool to scrape images from google images web.
 
 ## Prerequisites:
-- node v~12.16.0
-- npm v~6.14.5
+- node ~12.0.0
+- npm ~6.0.0
 
 ## Usage:
 - `git clone https://github.com/ruzor/image-web-scraper.git`
